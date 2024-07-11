@@ -1,5 +1,5 @@
 """
-Function: createPr
+Function: createPullRequest
 Method: POST
 Utility: create a pull request
 """

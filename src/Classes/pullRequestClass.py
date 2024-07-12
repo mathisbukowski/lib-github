@@ -1,9 +1,8 @@
 """
-Function: createPullRequest
-Method: POST
-Utility: create a pull request
+Class: PullRequest
+Method: POST/GET/PUT/PATCH
+Utility: Manage PullRequests.
 """
-import json
 
 import requests
 
@@ -13,9 +12,8 @@ GITHUB_API_LINK = "https://api.github.com"
 class PullRequest:
     def __init__(self, token, repo):
         self.repo_name = repo
-        self.bearer = token
         self.headers = {
-            'Authorization': f'token {self.bearer}',
+            'Authorization': f'token {token}',
             'Accept': 'application/vnd.github.v3+json'
         }
 
